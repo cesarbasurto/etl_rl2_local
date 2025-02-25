@@ -1,0 +1,5642 @@
+area_reserva_ley2:
+  expectation_suite_name: default
+  ge_cloud_id: null
+  expectations:
+  - expectation_type: expect_table_row_count_to_be_between
+    kwargs:
+      min_value: 0
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_table_columns_to_match_ordered_list
+    kwargs:
+      column_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: gid
+      type_list:
+      - BIGINT
+      - BYTEINT
+      - ByteType()
+      - INT
+      - INT64
+      - INTEGER
+      - Int128
+      - Int16
+      - Int16Dtype
+      - Int256
+      - Int32
+      - Int32Dtype
+      - Int64
+      - Int64Dtype
+      - Int8
+      - Int8Dtype
+      - IntegerType
+      - IntegerType()
+      - LongType
+      - LongType()
+      - SMALLINT
+      - ShortType()
+      - TINYINT
+      - UInt16Dtype
+      - UInt32Dtype
+      - UInt64Dtype
+      - UInt8Dtype
+      - Uint128
+      - Uint16
+      - Uint256
+      - Uint32
+      - Uint64
+      - Uint8
+      - int
+      - int16
+      - int32
+      - int64
+      - int8
+      - int_
+      - integer
+      - uint16
+      - uint32
+      - uint64
+      - uint8
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: gid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: gid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: gid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: id
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: nom_ley2
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: nom_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: nom_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: nom_ley2
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: nom_ley2
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: nom_ley2
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: nom_ley2
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: area_ha
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: area_ha
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: area_ha
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: area_ha
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: res_zoni
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: res_zoni
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: res_zoni
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: res_zoni
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: res_zoni
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: res_zoni
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: res_zoni
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_ingr
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_ingr
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_ingr
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_reco
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_reco
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_reco
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: globalid
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: globalid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: globalid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: globalid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: globalid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: globalid
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: globalid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_area_sh
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_area_sh
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_area_sh
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: st_area_sh
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_perimet
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_perimet
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_perimet
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: st_perimet
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: geom
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: geom
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: geom
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: geom
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: geom
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  data_asset_type: Dataset
+  meta:
+    great_expectations_version: 0.18.21
+    columns:
+      gid:
+        description: ''
+      id:
+        description: ''
+      nom_ley2:
+        description: ''
+      area_ha:
+        description: ''
+      res_zoni:
+        description: ''
+      fecha_ingr:
+        description: ''
+      fecha_reco:
+        description: ''
+      globalid:
+        description: ''
+      st_area_sh:
+        description: ''
+      st_perimet:
+        description: ''
+      geom:
+        description: ''
+    BasicDatasetProfiler:
+      created_by: BasicDatasetProfiler
+      created_at: 1739923204.7952986
+      batch_kwargs:
+        ge_batch_id: 790519e8-ee54-11ef-a3aa-0242ac120006
+    notes:
+      format: MetaNotesFormat.MARKDOWN
+      content:
+      - _To add additional notes, edit the <code>meta.notes.content</code> field in
+        the appropriate Expectation json file._
+    citations:
+    - citation_date: '2025-02-19T00:00:06.058042Z'
+      batch_kwargs:
+        ge_batch_id: 790519e8-ee54-11ef-a3aa-0242ac120006
+      comment: BasicDatasetProfiler added a citation based on the current batch.
+compensacion_ley2:
+  expectation_suite_name: default
+  ge_cloud_id: null
+  expectations:
+  - expectation_type: expect_table_row_count_to_be_between
+    kwargs:
+      min_value: 0
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_table_columns_to_match_ordered_list
+    kwargs:
+      column_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: gid
+      type_list:
+      - BIGINT
+      - BYTEINT
+      - ByteType()
+      - INT
+      - INT64
+      - INTEGER
+      - Int128
+      - Int16
+      - Int16Dtype
+      - Int256
+      - Int32
+      - Int32Dtype
+      - Int64
+      - Int64Dtype
+      - Int8
+      - Int8Dtype
+      - IntegerType
+      - IntegerType()
+      - LongType
+      - LongType()
+      - SMALLINT
+      - ShortType()
+      - TINYINT
+      - UInt16Dtype
+      - UInt32Dtype
+      - UInt64Dtype
+      - UInt8Dtype
+      - Uint128
+      - Uint16
+      - Uint256
+      - Uint32
+      - Uint64
+      - Uint8
+      - int
+      - int16
+      - int32
+      - int64
+      - int8
+      - int_
+      - integer
+      - uint16
+      - uint32
+      - uint64
+      - uint8
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: gid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: gid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: gid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id_reserva
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id_reserva
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id_reserva
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id_reserva
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id_reserva
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id_reserva
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id_sdef
+      type_list:
+      - BIGINT
+      - BYTEINT
+      - ByteType()
+      - INT
+      - INT64
+      - INTEGER
+      - Int128
+      - Int16
+      - Int16Dtype
+      - Int256
+      - Int32
+      - Int32Dtype
+      - Int64
+      - Int64Dtype
+      - Int8
+      - Int8Dtype
+      - IntegerType
+      - IntegerType()
+      - LongType
+      - LongType()
+      - SMALLINT
+      - ShortType()
+      - TINYINT
+      - UInt16Dtype
+      - UInt32Dtype
+      - UInt64Dtype
+      - UInt8Dtype
+      - Uint128
+      - Uint16
+      - Uint256
+      - Uint32
+      - Uint64
+      - Uint8
+      - int
+      - int16
+      - int32
+      - int64
+      - int8
+      - int_
+      - integer
+      - uint16
+      - uint32
+      - uint64
+      - uint8
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id_sdef
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id_sdef
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id_sdef
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id_sdef
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: municipio
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: municipio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: municipio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: municipio
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: municipio
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: municipio
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: departamen
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: departamen
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: departamen
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: departamen
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: departamen
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: departamen
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: expediente
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: expediente
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: expediente
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: expediente
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: expediente
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: expediente
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: acto_admin
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: acto_admin
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: acto_admin
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: acto_admin
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: acto_admin
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: acto_admin
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_acto
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_acto
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_acto
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_acto
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_acto
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: entidad_ex
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: entidad_ex
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: entidad_ex
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: entidad_ex
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: entidad_ex
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: entidad_ex
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: proyecto
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: proyecto
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: proyecto
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: proyecto
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: proyecto
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: proyecto
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: area_ha
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: area_ha
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: area_ha
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_min_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_max_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_mean_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_median_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_quantile_values_to_be_between
+    kwargs:
+      column: area_ha
+      quantile_ranges:
+        quantiles:
+        - 0.05
+        - 0.25
+        - 0.5
+        - 0.75
+        - 0.95
+        value_ranges:
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_kl_divergence_to_be_less_than
+    kwargs:
+      column: area_ha
+      partition_object: null
+      threshold: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_ingr
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_ingr
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_ingr
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_reco
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_reco
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_reco
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: nombre
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: nombre
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: nombre
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: nombre
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: nombre
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: nombre
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: globalid
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: globalid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: globalid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: globalid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: globalid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: globalid
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: globalid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: created_us
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: created_us
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: created_us
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: created_us
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: created_us
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: created_us
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: created_da
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: created_da
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: created_da
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: created_da
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: created_da
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: last_edite
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: last_edite
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: last_edite
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: last_edite
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: last_edite
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: last_edite
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: last_edi_1
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: last_edi_1
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: last_edi_1
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: last_edi_1
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: last_edi_1
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_area_sh
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_area_sh
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_area_sh
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: st_area_sh
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_perimet
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_perimet
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_perimet
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: st_perimet
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: geom
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: geom
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: geom
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: geom
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: geom
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  data_asset_type: Dataset
+  meta:
+    great_expectations_version: 0.18.21
+    columns:
+      gid:
+        description: ''
+      id:
+        description: ''
+      id_reserva:
+        description: ''
+      id_sdef:
+        description: ''
+      municipio:
+        description: ''
+      departamen:
+        description: ''
+      expediente:
+        description: ''
+      acto_admin:
+        description: ''
+      fecha_acto:
+        description: ''
+      entidad_ex:
+        description: ''
+      proyecto:
+        description: ''
+      area_ha:
+        description: ''
+      fecha_ingr:
+        description: ''
+      fecha_reco:
+        description: ''
+      nombre:
+        description: ''
+      globalid:
+        description: ''
+      created_us:
+        description: ''
+      created_da:
+        description: ''
+      last_edite:
+        description: ''
+      last_edi_1:
+        description: ''
+      st_area_sh:
+        description: ''
+      st_perimet:
+        description: ''
+      geom:
+        description: ''
+    BasicDatasetProfiler:
+      created_by: BasicDatasetProfiler
+      created_at: 1739923206.3734357
+      batch_kwargs:
+        ge_batch_id: 79dd48e0-ee54-11ef-a3aa-0242ac120006
+    notes:
+      format: MetaNotesFormat.MARKDOWN
+      content:
+      - _To add additional notes, edit the <code>meta.notes.content</code> field in
+        the appropriate Expectation json file._
+    citations:
+    - citation_date: '2025-02-19T00:00:06.577160Z'
+      batch_kwargs:
+        ge_batch_id: 79dd48e0-ee54-11ef-a3aa-0242ac120006
+      comment: BasicDatasetProfiler added a citation based on the current batch.
+sustracciones_temporales_ley2:
+  expectation_suite_name: default
+  ge_cloud_id: null
+  expectations:
+  - expectation_type: expect_table_row_count_to_be_between
+    kwargs:
+      min_value: 0
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_table_columns_to_match_ordered_list
+    kwargs:
+      column_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: gid
+      type_list:
+      - BIGINT
+      - BYTEINT
+      - ByteType()
+      - INT
+      - INT64
+      - INTEGER
+      - Int128
+      - Int16
+      - Int16Dtype
+      - Int256
+      - Int32
+      - Int32Dtype
+      - Int64
+      - Int64Dtype
+      - Int8
+      - Int8Dtype
+      - IntegerType
+      - IntegerType()
+      - LongType
+      - LongType()
+      - SMALLINT
+      - ShortType()
+      - TINYINT
+      - UInt16Dtype
+      - UInt32Dtype
+      - UInt64Dtype
+      - UInt8Dtype
+      - Uint128
+      - Uint16
+      - Uint256
+      - Uint32
+      - Uint64
+      - Uint8
+      - int
+      - int16
+      - int32
+      - int64
+      - int8
+      - int_
+      - integer
+      - uint16
+      - uint32
+      - uint64
+      - uint8
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: gid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: gid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: gid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: id
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id_ley2
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id_ley2
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id_ley2
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id_ley2
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: nom_ley2
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: nom_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: nom_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: nom_ley2
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: nom_ley2
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: nom_ley2
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: sustrajo
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: sustrajo
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: sustrajo
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: sustrajo
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: sustrajo
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: sustrajo
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: solicitant
+      type_list:
+      - BIGINT
+      - BYTEINT
+      - ByteType()
+      - INT
+      - INT64
+      - INTEGER
+      - Int128
+      - Int16
+      - Int16Dtype
+      - Int256
+      - Int32
+      - Int32Dtype
+      - Int64
+      - Int64Dtype
+      - Int8
+      - Int8Dtype
+      - IntegerType
+      - IntegerType()
+      - LongType
+      - LongType()
+      - SMALLINT
+      - ShortType()
+      - TINYINT
+      - UInt16Dtype
+      - UInt32Dtype
+      - UInt64Dtype
+      - UInt8Dtype
+      - Uint128
+      - Uint16
+      - Uint256
+      - Uint32
+      - Uint64
+      - Uint8
+      - int
+      - int16
+      - int32
+      - int64
+      - int8
+      - int_
+      - integer
+      - uint16
+      - uint32
+      - uint64
+      - uint8
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: solicitant
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: solicitant
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: solicitant
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: solicitant
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: acto_admin
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: acto_admin
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: acto_admin
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: acto_admin
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: acto_admin
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: acto_admin
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_acto
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_acto
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_acto
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_acto
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_acto
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: municipio
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: municipio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: municipio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: municipio
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: municipio
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: municipio
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: departamen
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: departamen
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: departamen
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: departamen
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: departamen
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: departamen
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_fin
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_fin
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_fin
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_fin
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_fin
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: observacio
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: observacio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: observacio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: observacio
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: observacio
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: observacio
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: sector
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: sector
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: sector
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: sector
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: sector
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: sector
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: area_ha
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: area_ha
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: area_ha
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: area_ha
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_ingr
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_ingr
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_ingr
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_reco
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_reco
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_reco
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id_dbbse
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id_dbbse
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id_dbbse
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id_dbbse
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id_dbbse
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id_dbbse
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_area_sh
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_area_sh
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_area_sh
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_min_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_max_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_mean_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_median_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_quantile_values_to_be_between
+    kwargs:
+      column: st_area_sh
+      quantile_ranges:
+        quantiles:
+        - 0.05
+        - 0.25
+        - 0.5
+        - 0.75
+        - 0.95
+        value_ranges:
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_kl_divergence_to_be_less_than
+    kwargs:
+      column: st_area_sh
+      partition_object: null
+      threshold: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_perimet
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_perimet
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_perimet
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_min_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_max_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_mean_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_median_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_quantile_values_to_be_between
+    kwargs:
+      column: st_perimet
+      quantile_ranges:
+        quantiles:
+        - 0.05
+        - 0.25
+        - 0.5
+        - 0.75
+        - 0.95
+        value_ranges:
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+        - - null
+          - null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_kl_divergence_to_be_less_than
+    kwargs:
+      column: st_perimet
+      partition_object: null
+      threshold: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: geom
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: geom
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: geom
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: geom
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  data_asset_type: Dataset
+  meta:
+    great_expectations_version: 0.18.21
+    columns:
+      gid:
+        description: ''
+      id:
+        description: ''
+      id_ley2:
+        description: ''
+      nom_ley2:
+        description: ''
+      sustrajo:
+        description: ''
+      solicitant:
+        description: ''
+      acto_admin:
+        description: ''
+      fecha_acto:
+        description: ''
+      municipio:
+        description: ''
+      departamen:
+        description: ''
+      fecha_fin:
+        description: ''
+      observacio:
+        description: ''
+      sector:
+        description: ''
+      area_ha:
+        description: ''
+      fecha_ingr:
+        description: ''
+      fecha_reco:
+        description: ''
+      id_dbbse:
+        description: ''
+      st_area_sh:
+        description: ''
+      st_perimet:
+        description: ''
+      geom:
+        description: ''
+    BasicDatasetProfiler:
+      created_by: BasicDatasetProfiler
+      created_at: 1739923206.9091425
+      batch_kwargs:
+        ge_batch_id: 7a36620e-ee54-11ef-a3aa-0242ac120006
+    notes:
+      format: MetaNotesFormat.MARKDOWN
+      content:
+      - _To add additional notes, edit the <code>meta.notes.content</code> field in
+        the appropriate Expectation json file._
+    citations:
+    - citation_date: '2025-02-19T00:00:07.477239Z'
+      batch_kwargs:
+        ge_batch_id: 7a36620e-ee54-11ef-a3aa-0242ac120006
+      comment: BasicDatasetProfiler added a citation based on the current batch.
+sustracciones_definitivas_ley2:
+  expectation_suite_name: default
+  ge_cloud_id: null
+  expectations:
+  - expectation_type: expect_table_row_count_to_be_between
+    kwargs:
+      min_value: 0
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_table_columns_to_match_ordered_list
+    kwargs:
+      column_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: gid
+      type_list:
+      - BIGINT
+      - BYTEINT
+      - ByteType()
+      - INT
+      - INT64
+      - INTEGER
+      - Int128
+      - Int16
+      - Int16Dtype
+      - Int256
+      - Int32
+      - Int32Dtype
+      - Int64
+      - Int64Dtype
+      - Int8
+      - Int8Dtype
+      - IntegerType
+      - IntegerType()
+      - LongType
+      - LongType()
+      - SMALLINT
+      - ShortType()
+      - TINYINT
+      - UInt16Dtype
+      - UInt32Dtype
+      - UInt64Dtype
+      - UInt8Dtype
+      - Uint128
+      - Uint16
+      - Uint256
+      - Uint32
+      - Uint64
+      - Uint8
+      - int
+      - int16
+      - int32
+      - int64
+      - int8
+      - int_
+      - integer
+      - uint16
+      - uint32
+      - uint64
+      - uint8
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: gid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: gid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: gid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id_ley2
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id_ley2
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id_ley2
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id_ley2
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: nom_ley2
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: nom_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: nom_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: nom_ley2
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: nom_ley2
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: nom_ley2
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: sustrajo
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: sustrajo
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: sustrajo
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: sustrajo
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: sustrajo
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: sustrajo
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_distinct_values_to_be_in_set
+    kwargs:
+      column: sustrajo
+      value_set: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: sector
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: sector
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: sector
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: sector
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: sector
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: sector
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: solicitant
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: solicitant
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: solicitant
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: solicitant
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: solicitant
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: solicitant
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: acto_admin
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: acto_admin
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: acto_admin
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: acto_admin
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: acto_admin
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: acto_admin
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_acto
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_acto
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_acto
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_acto
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_acto
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: municipio
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: municipio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: municipio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: municipio
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: municipio
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: municipio
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: departamen
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: departamen
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: departamen
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: departamen
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: departamen
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: departamen
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: observacio
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: observacio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: observacio
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: observacio
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: observacio
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: observacio
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: area_ha
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: area_ha
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: area_ha
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: area_ha
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_ingr
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_ingr
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_ingr
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_reco
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_reco
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_reco
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: globalid
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: globalid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: globalid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: globalid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: globalid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: globalid
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: globalid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_area_sh
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_area_sh
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_area_sh
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: st_area_sh
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_perimet
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_perimet
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_perimet
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: st_perimet
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: geom
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: geom
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: geom
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: geom
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: geom
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  data_asset_type: Dataset
+  meta:
+    great_expectations_version: 0.18.21
+    columns:
+      gid:
+        description: ''
+      id:
+        description: ''
+      id_ley2:
+        description: ''
+      nom_ley2:
+        description: ''
+      sustrajo:
+        description: ''
+      sector:
+        description: ''
+      solicitant:
+        description: ''
+      acto_admin:
+        description: ''
+      fecha_acto:
+        description: ''
+      municipio:
+        description: ''
+      departamen:
+        description: ''
+      observacio:
+        description: ''
+      area_ha:
+        description: ''
+      fecha_ingr:
+        description: ''
+      fecha_reco:
+        description: ''
+      globalid:
+        description: ''
+      st_area_sh:
+        description: ''
+      st_perimet:
+        description: ''
+      geom:
+        description: ''
+    BasicDatasetProfiler:
+      created_by: BasicDatasetProfiler
+      created_at: 1739923207.9478965
+      batch_kwargs:
+        ge_batch_id: 7ad4a446-ee54-11ef-a3aa-0242ac120006
+    notes:
+      format: MetaNotesFormat.MARKDOWN
+      content:
+      - _To add additional notes, edit the <code>meta.notes.content</code> field in
+        the appropriate Expectation json file._
+    citations:
+    - citation_date: '2025-02-19T00:00:09.519157Z'
+      batch_kwargs:
+        ge_batch_id: 7ad4a446-ee54-11ef-a3aa-0242ac120006
+      comment: BasicDatasetProfiler added a citation based on the current batch.
+zonificacion_ley2:
+  expectation_suite_name: default
+  ge_cloud_id: null
+  expectations:
+  - expectation_type: expect_table_row_count_to_be_between
+    kwargs:
+      min_value: 0
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_table_columns_to_match_ordered_list
+    kwargs:
+      column_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: gid
+      type_list:
+      - BIGINT
+      - BYTEINT
+      - ByteType()
+      - INT
+      - INT64
+      - INTEGER
+      - Int128
+      - Int16
+      - Int16Dtype
+      - Int256
+      - Int32
+      - Int32Dtype
+      - Int64
+      - Int64Dtype
+      - Int8
+      - Int8Dtype
+      - IntegerType
+      - IntegerType()
+      - LongType
+      - LongType()
+      - SMALLINT
+      - ShortType()
+      - TINYINT
+      - UInt16Dtype
+      - UInt32Dtype
+      - UInt64Dtype
+      - UInt8Dtype
+      - Uint128
+      - Uint16
+      - Uint256
+      - Uint32
+      - Uint64
+      - Uint8
+      - int
+      - int16
+      - int32
+      - int64
+      - int8
+      - int_
+      - integer
+      - uint16
+      - uint32
+      - uint64
+      - uint8
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: gid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: gid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: gid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: gid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: id
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: id_ley2
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: id_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: id_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: id_ley2
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: id_ley2
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: id_ley2
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: nom_ley2
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: nom_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: nom_ley2
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: nom_ley2
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: nom_ley2
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: nom_ley2
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: tipo_zoni
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: tipo_zoni
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: tipo_zoni
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: tipo_zoni
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: tipo_zoni
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: tipo_zoni
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: soporte
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: soporte
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: soporte
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: soporte
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: soporte
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: soporte
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: departamen
+      type_list:
+      - BIGINT
+      - BYTEINT
+      - ByteType()
+      - INT
+      - INT64
+      - INTEGER
+      - Int128
+      - Int16
+      - Int16Dtype
+      - Int256
+      - Int32
+      - Int32Dtype
+      - Int64
+      - Int64Dtype
+      - Int8
+      - Int8Dtype
+      - IntegerType
+      - IntegerType()
+      - LongType
+      - LongType()
+      - SMALLINT
+      - ShortType()
+      - TINYINT
+      - UInt16Dtype
+      - UInt32Dtype
+      - UInt64Dtype
+      - UInt8Dtype
+      - Uint128
+      - Uint16
+      - Uint256
+      - Uint32
+      - Uint64
+      - Uint8
+      - int
+      - int16
+      - int32
+      - int64
+      - int8
+      - int_
+      - integer
+      - uint16
+      - uint32
+      - uint64
+      - uint8
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: departamen
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: departamen
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: departamen
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: departamen
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: area_ha
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: area_ha
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: area_ha
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: area_ha
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: area_ha
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_ingr
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_ingr
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_ingr
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_ingr
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: fecha_reco
+      type_list: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: fecha_reco
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: fecha_reco
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: fecha_reco
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: globalid
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: globalid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: globalid
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: globalid
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: globalid
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: globalid
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: globalid
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_area_sh
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_area_sh
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_area_sh
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_area_sh
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: st_area_sh
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: st_perimet
+      type_list:
+      - DECIMAL
+      - DOUBLE
+      - DOUBLE_PRECISION
+      - DecimalType()
+      - DoubleType
+      - DoubleType()
+      - FLOAT
+      - FLOAT4
+      - FLOAT64
+      - FLOAT8
+      - Float32
+      - Float64
+      - FloatType
+      - FloatType()
+      - NUMERIC
+      - REAL
+      - float
+      - float16
+      - float32
+      - float64
+      - float_
+      - number
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: st_perimet
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: st_perimet
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: st_perimet
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: st_perimet
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_type_list
+    kwargs:
+      column: geom
+      type_list:
+      - CHAR
+      - FixedString
+      - NCHAR
+      - NTEXT
+      - NVARCHAR
+      - STRING
+      - StringType
+      - StringType()
+      - TEXT
+      - VARCHAR
+      - dtype('O')
+      - object
+      - str
+      - string
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_unique_value_count_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_proportion_of_unique_values_to_be_between
+    kwargs:
+      column: geom
+      min_value: null
+      max_value: null
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_be_null
+    kwargs:
+      column: geom
+      mostly: 0.5
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_in_set
+    kwargs:
+      column: geom
+      value_set: []
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_not_match_regex
+    kwargs:
+      column: geom
+      regex: ^\s+|\s+$
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  - expectation_type: expect_column_values_to_be_unique
+    kwargs:
+      column: geom
+    meta:
+      BasicDatasetProfiler:
+        confidence: very low
+  data_asset_type: Dataset
+  meta:
+    great_expectations_version: 0.18.21
+    columns:
+      gid:
+        description: ''
+      id:
+        description: ''
+      id_ley2:
+        description: ''
+      nom_ley2:
+        description: ''
+      tipo_zoni:
+        description: ''
+      soporte:
+        description: ''
+      departamen:
+        description: ''
+      area_ha:
+        description: ''
+      fecha_ingr:
+        description: ''
+      fecha_reco:
+        description: ''
+      globalid:
+        description: ''
+      st_area_sh:
+        description: ''
+      st_perimet:
+        description: ''
+      geom:
+        description: ''
+    BasicDatasetProfiler:
+      created_by: BasicDatasetProfiler
+      created_at: 1739923210.262146
+      batch_kwargs:
+        ge_batch_id: 7c3fe868-ee54-11ef-a3aa-0242ac120006
+    notes:
+      format: MetaNotesFormat.MARKDOWN
+      content:
+      - _To add additional notes, edit the <code>meta.notes.content</code> field in
+        the appropriate Expectation json file._
+    citations:
+    - citation_date: '2025-02-19T00:00:14.699889Z'
+      batch_kwargs:
+        ge_batch_id: 7c3fe868-ee54-11ef-a3aa-0242ac120006
+      comment: BasicDatasetProfiler added a citation based on the current batch.

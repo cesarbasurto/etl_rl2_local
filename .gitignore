@@ -1,0 +1,6 @@
+
+*.xtf
+AirflowDocker/etl/temp/*
+AirflowDocker/etl/xtf/*
+AirflowDocker/logs/*
+
