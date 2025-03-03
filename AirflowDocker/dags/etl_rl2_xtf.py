@@ -271,10 +271,10 @@ def _obtener_archivo_zip(key, url, insumos_local, base_local, zip_path):
     except Exception as e:
         logging.error(f"Error descargando '{url}': {e}")
         # Fallback: usar archivo local
-        return _validar_archivo_local(key, insumos_local, base_local, zip_path)
+        return _validar_archivo_local(key, insumos_local, base_local)
 
 
-def _validar_archivo_local(key, insumos_local, base_local, zip_path):
+def _validar_archivo_local(key, insumos_local, base_local):
     """
     Verifica si existe una ruta local para el ZIP y la retorna.
     Lanza excepción si no existe.
