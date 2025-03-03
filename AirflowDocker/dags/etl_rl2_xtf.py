@@ -228,7 +228,8 @@ def importar_insumos_desde_web():
     base_local = "/opt/airflow/etl"
 
     if not insumos_web:
-        raise Exception("No se encontraron 'insumos_web' en la configuración.")
+        logging.error("No se encontraron 'insumos_web' en la configuración.")
+        raise
 
     os.makedirs(TEMP_FOLDER, exist_ok=True)
 
@@ -247,7 +248,8 @@ def importar_insumos_desde_web():
         # 3. Buscar archivo SHP
         shp_file = _buscar_shp_en_carpeta(extract_folder)
         if not shp_file:
-            raise Exception(f"No se encontró archivo SHP en {extract_folder} para '{key}'.")
+            logging.error(f"No se encontró archivo SHP en {extract_folder} para '{key}'.")
+            raise
 
         # 4. Importar el SHP a PostgreSQL
         _importar_shp_a_postgres(db_config, shp_file, f"insumos.{key}")
@@ -284,8 +286,8 @@ def _validar_archivo_local(key, insumos_local, base_local):
         if os.path.exists(local_zip_path):
             logging.info(f"Usando archivo local para '{key}': {local_zip_path}")
             return local_zip_path
-        raise Exception(f"Archivo local para '{key}' no encontrado en {local_zip_path}.")
-    raise Exception(f"No se encontró entrada local para '{key}'.")
+        logging.error(f"Archivo local para '{key}' no encontrado en {local_zip_path}.")
+    logging.error(f"No se encontró entrada local para '{key}'.")
 
 
 def _extraer_zip(zip_path, extract_folder):
@@ -294,8 +296,12 @@ def _extraer_zip(zip_path, extract_folder):
         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
             zip_ref.extractall(extract_folder)
         logging.info(f"Archivo extraído correctamente en: {extract_folder}")
+    except zipfile.BadZipFile as e:
+        logging.error(f"El archivo '{zip_path}' no es un ZIP válido: {e}")
+        raise  # Mantén o cambia por otra excepción específica si lo deseas
     except Exception as e:
-        raise Exception(f"Error extrayendo '{zip_path}': {e}")
+        logging.error(f"Error extrayendo '{zip_path}': {e}")
+        raise  # Mantén o cambia por otra excepción específica si lo deseas
 
 
 def _buscar_shp_en_carpeta(folder):
@@ -327,7 +333,8 @@ def _importar_shp_a_postgres(db_config, shp_file, table_name):
         subprocess.run(command, capture_output=True, text=True, check=True)
         logging.info(f"Archivo '{shp_file}' importado correctamente en '{table_name}'.")
     except subprocess.CalledProcessError as e:
-        raise Exception(f"Error importando '{table_name}': {e.stderr}")
+        logging.error(f"Error importando '{table_name}': {e.stderr}")
+        raise
 
 
 def ejecutar_migracion_datos_estructura_intermedia():
@@ -340,7 +347,8 @@ def ejecutar_migracion_datos_estructura_intermedia():
         else:
             logging.info("Migración a estructura_intermedia completada por función interna.")
     except Exception as e:
-        raise Exception(f"Error migrando a estructura_intermedia: {e}")
+        logging.error(f"Error migrando a estructura_intermedia: {e}")
+        raise
 
 def ejecutar_validacion_datos():
     logging.info("Validando datos en la estructura intermedia...")
@@ -353,7 +361,8 @@ def ejecutar_validacion_datos():
                 ejecutar_sql(resultado)
         logging.info("Validación de datos completada.")
     except Exception as e:
-        raise Exception(f"Error validando datos: {e}")
+        logging.error(f"Error validando datos: {e}")
+        raise
 
 def ejecutar_migracion_datos_ladm():
     logging.info("Migrando datos al modelo LADM...")
@@ -365,7 +374,8 @@ def ejecutar_migracion_datos_ladm():
         else:
             logging.info("Migración a LADM completada por función interna.")
     except Exception as e:
-        raise Exception(f"Error migrando a LADM: {e}")
+        logging.error(f"Error migrando a LADM: {e}")
+        raise
 
 def exportar_datos_ladm_rl2():
     logging.info("Exportando datos del esquema 'ladm' a XTF (ili2db) ...")
@@ -404,7 +414,8 @@ def exportar_datos_ladm_rl2():
         result = subprocess.run(command, capture_output=True, text=True, check=True)
         logging.info(f"Exportación a XTF completada: {result.stderr.strip()}")
     except subprocess.CalledProcessError as e:
-        raise Exception(f"Error exportando XTF: {e.stderr}")
+        logging.error(f"Error exportando XTF: {e.stderr}")
+        raise
 
 # -------------- REPORTE DE TABLAS Y COLUMNAS (SOLO ESTRUCTURA) --------------
 
@@ -442,13 +453,15 @@ def _cargar_expectativas_desde_yaml(yaml_filename):
     """
     yaml_path = os.path.join(GX_DIR, yaml_filename)
     if not os.path.exists(yaml_path):
-        raise Exception(f"Archivo de expectativas {yaml_path} no existe.")
+        logging.error(f"Archivo de expectativas {yaml_path} no existe.")
+        raise
 
     with open(yaml_path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
     if "expectations" not in data:
-        raise Exception("El archivo de expectativas no contiene 'expectations'.")
+        logging.error("El archivo de expectativas no contiene 'expectations'.")
+        raise
 
     return data
 
