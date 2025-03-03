@@ -229,7 +229,7 @@ def importar_insumos_desde_web():
 
     if not insumos_web:
         logging.error("No se encontraron 'insumos_web' en la configuración.")
-        raise
+        
 
     os.makedirs(TEMP_FOLDER, exist_ok=True)
 
@@ -249,7 +249,7 @@ def importar_insumos_desde_web():
         shp_file = _buscar_shp_en_carpeta(extract_folder)
         if not shp_file:
             logging.error(f"No se encontró archivo SHP en {extract_folder} para '{key}'.")
-            raise
+            
 
         # 4. Importar el SHP a PostgreSQL
         _importar_shp_a_postgres(db_config, shp_file, f"insumos.{key}")
@@ -356,7 +356,8 @@ def ejecutar_validacion_datos():
         resultado = validar_estructura()
         if resultado is not None:
             if isinstance(resultado, bool) and not resultado:
-                raise Exception("Validación de datos falló.")
+                logging.error("Validación de datos falló.")
+                raise
             elif isinstance(resultado, str):
                 ejecutar_sql(resultado)
         logging.info("Validación de datos completada.")
@@ -454,14 +455,12 @@ def _cargar_expectativas_desde_yaml(yaml_filename):
     yaml_path = os.path.join(GX_DIR, yaml_filename)
     if not os.path.exists(yaml_path):
         logging.error(f"Archivo de expectativas {yaml_path} no existe.")
-        raise
 
     with open(yaml_path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
 
     if "expectations" not in data:
         logging.error("El archivo de expectativas no contiene 'expectations'.")
-        raise
 
     return data
 
