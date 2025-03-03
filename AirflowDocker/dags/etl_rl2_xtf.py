@@ -217,116 +217,118 @@ def ejecutar_importar_estructura_intermedia():
         raise
 
 def importar_insumos_desde_web():
+    """Descarga, descomprime y sube a la base de datos los insumos declarados en la configuración."""
     logging.info("Iniciando importación de insumos...")
     limpiar_carpeta_temporal()
     config = leer_configuracion()
     db_config = config["db"]
+
     insumos_web = config.get("insumos_web", {})
     insumos_local = config.get("insumos_local", {})
     base_local = "/opt/airflow/etl"
+
     if not insumos_web:
         raise Exception("No se encontraron 'insumos_web' en la configuración.")
-    if not os.path.exists(TEMP_FOLDER):
-        os.makedirs(TEMP_FOLDER)
+
+    os.makedirs(TEMP_FOLDER, exist_ok=True)
+
     for key, url in insumos_web.items():
-        logging.info(f"Descargando insumo '{key}' desde {url}...")
         zip_path = os.path.join(TEMP_FOLDER, f"{key}.zip")
-        download_success = False
-        try:
-            response = requests.get(url, stream=True, timeout=10)
-            response.raise_for_status()
-            with open(zip_path, "wb") as f:
-                for chunk in response.iter_content(chunk_size=8192):
-                    f.write(chunk)
-            logging.info(f"Archivo '{key}.zip' descargado correctamente.")
-            download_success = True
-        except Exception as e:
-            logging.error(f"Error descargando '{url}': {e}")
-        if not download_success:
-            if key in insumos_local:
-                local_zip_path = os.path.join(base_local, insumos_local[key].lstrip("/"))
-                if os.path.exists(local_zip_path):
-                    logging.info(f"Usando archivo local para '{key}': {local_zip_path}")
-                    zip_path = local_zip_path
-                else:
-                    raise Exception(f"Archivo local para '{key}' no encontrado en {local_zip_path}.")
-            else:
-                raise Exception(f"No se encontró entrada local para '{key}'.")
+        logging.info(f"Procesando insumo '{key}'...")
+
+        # 1. Descargar (o usar archivo local) el ZIP
+        zip_path = _obtener_archivo_zip(key, url, insumos_local, base_local, zip_path)
+
+        # 2. Extraer el ZIP
         extract_folder = os.path.join(TEMP_FOLDER, key)
-        if not os.path.exists(extract_folder):
-            os.makedirs(extract_folder)
-        try:
-            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                zip_ref.extractall(extract_folder)
-            logging.info(f"Archivo '{key}.zip' extraído en {extract_folder}.")
-        except Exception as e:
-            raise Exception(f"Error extrayendo '{zip_path}': {e}")
-        shp_file = None
-        for root, dirs, files in os.walk(extract_folder):
-            for file in files:
-                if file.endswith(".shp"):
-                    shp_file = os.path.join(root, file)
-                    break
-            if shp_file:
-                break
+        os.makedirs(extract_folder, exist_ok=True)
+        _extraer_zip(zip_path, extract_folder)
+
+        # 3. Buscar archivo SHP
+        shp_file = _buscar_shp_en_carpeta(extract_folder)
         if not shp_file:
             raise Exception(f"No se encontró archivo SHP en {extract_folder} para '{key}'.")
-        logging.info(f"Importando '{key}' en el esquema 'insumos'...")
-        command = [
-            "ogr2ogr", "-f", "PostgreSQL",
-            f"PG:host={db_config['host']} port={db_config['port']} dbname={db_config['db_name']} user={db_config['user']} password={db_config['password']}",
-            shp_file,
-            "-nln", f"insumos.{key}",
-            "-overwrite", "-progress",
-            "-lco", "GEOMETRY_NAME=geom",
-            "-lco", "FID=gid",
-            "-nlt", "PROMOTE_TO_MULTI",
-            "-t_srs", "EPSG:9377"
-        ]
-        try:
-            subprocess.run(command, capture_output=True, text=True, check=True)
-            logging.info(f"'{key}' importado correctamente en 'insumos'.")
-        except subprocess.CalledProcessError as e:
-            raise Exception(f"Error importando '{key}': {e.stderr}")
+
+        # 4. Importar el SHP a PostgreSQL
+        _importar_shp_a_postgres(db_config, shp_file, f"insumos.{key}")
     logging.info("Proceso de importación de insumos finalizado.")
 
-def importar_esquema_ladm_rl2():
-    logging.info("Importando esquema LADM-RL2...")
-    config = leer_configuracion()
-    db_config = config["db"]
-    if not os.path.exists(ILI2DB_JAR_PATH):
-        raise Exception(f"Archivo JAR no encontrado: {ILI2DB_JAR_PATH}")
-    command = [
-        "java", "-Duser.language=es", "-Duser.country=ES", "-jar", ILI2DB_JAR_PATH,
-        "--schemaimport", "--setupPgExt",
-        "--dbhost", db_config["host"],
-        "--dbport", str(db_config["port"]),
-        "--dbusr", db_config["user"],
-        "--dbpwd", db_config["password"],
-        "--dbdatabase", db_config["db_name"],
-        "--dbschema", "ladm",
-        "--coalesceCatalogueRef", "--createNumChecks", "--createUnique",
-        "--createFk", "--createFkIdx", "--coalesceMultiSurface",
-        "--coalesceMultiLine", "--coalesceMultiPoint", "--coalesceArray",
-        "--beautifyEnumDispName", "--createGeomIdx", "--createMetaInfo",
-        "--expandMultilingual", "--createTypeConstraint",
-        "--createEnumTabsWithId", "--createTidCol", "--smart2Inheritance",
-        "--strokeArcs", "--createBasketCol",
-        "--defaultSrsAuth", "EPSG",
-        "--defaultSrsCode", "9377",
-        "--preScript", EPSG_SCRIPT,
-        "--postScript", "NULL",
-        "--modeldir", MODEL_DIR,
-        "--models", "LADM_COL_v_1_0_0_Ext_RL2",
-        "--iliMetaAttrs", "NULL"
-    ]
-    logging.info("Ejecutando ili2pg para importar LADM-RL2...")
-    logging.info(" ".join(command))
+
+def _obtener_archivo_zip(key, url, insumos_local, base_local, zip_path):
+    """
+    Intenta descargar el ZIP desde la URL; si falla, busca un ZIP local de respaldo.
+    Retorna la ruta final del ZIP a usar.
+    """
     try:
-        subprocess.run(command, check=True)
-        logging.info("Esquema LADM-RL2 importado correctamente.")
+        logging.info(f"Descargando insumo '{key}' desde {url}...")
+        response = requests.get(url, stream=True, timeout=10)
+        response.raise_for_status()
+        with open(zip_path, "wb") as f:
+            for chunk in response.iter_content(chunk_size=8192):
+                f.write(chunk)
+        logging.info(f"Archivo '{key}.zip' descargado correctamente.")
+        return zip_path
+    except Exception as e:
+        logging.error(f"Error descargando '{url}': {e}")
+        # Fallback: usar archivo local
+        return _validar_archivo_local(key, insumos_local, base_local, zip_path)
+
+
+def _validar_archivo_local(key, insumos_local, base_local, zip_path):
+    """
+    Verifica si existe una ruta local para el ZIP y la retorna.
+    Lanza excepción si no existe.
+    """
+    if key in insumos_local:
+        local_zip_path = os.path.join(base_local, insumos_local[key].lstrip("/"))
+        if os.path.exists(local_zip_path):
+            logging.info(f"Usando archivo local para '{key}': {local_zip_path}")
+            return local_zip_path
+        raise Exception(f"Archivo local para '{key}' no encontrado en {local_zip_path}.")
+    raise Exception(f"No se encontró entrada local para '{key}'.")
+
+
+def _extraer_zip(zip_path, extract_folder):
+    """Extrae el contenido de un archivo ZIP en la carpeta indicada."""
+    try:
+        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            zip_ref.extractall(extract_folder)
+        logging.info(f"Archivo extraído correctamente en: {extract_folder}")
+    except Exception as e:
+        raise Exception(f"Error extrayendo '{zip_path}': {e}")
+
+
+def _buscar_shp_en_carpeta(folder):
+    """Recorre recursivamente la carpeta para encontrar el primer archivo SHP y devuelve su ruta."""
+    for root, dirs, files in os.walk(folder):
+        for file_name in files:
+            if file_name.endswith(".shp"):
+                return os.path.join(root, file_name)
+    return None
+
+
+def _importar_shp_a_postgres(db_config, shp_file, table_name):
+    """Importa el SHP a la base de datos PostgreSQL usando OGR2OGR."""
+    logging.info(f"Importando '{shp_file}' en la tabla '{table_name}'...")
+    command = [
+        "ogr2ogr", "-f", "PostgreSQL",
+        f"PG:host={db_config['host']} port={db_config['port']} "
+        f"dbname={db_config['db_name']} user={db_config['user']} password={db_config['password']}",
+        shp_file,
+        "-nln", table_name,
+        "-overwrite",
+        "-progress",
+        "-lco", "GEOMETRY_NAME=geom",
+        "-lco", "FID=gid",
+        "-nlt", "PROMOTE_TO_MULTI",
+        "-t_srs", "EPSG:9377"
+    ]
+    try:
+        subprocess.run(command, capture_output=True, text=True, check=True)
+        logging.info(f"Archivo '{shp_file}' importado correctamente en '{table_name}'.")
     except subprocess.CalledProcessError as e:
-        raise Exception(f"Error importando LADM-RL2: {e}")
+        raise Exception(f"Error importando '{table_name}': {e.stderr}")
+
 
 def ejecutar_migracion_datos_estructura_intermedia():
     logging.info("Migrando datos a estructura_intermedia...")
