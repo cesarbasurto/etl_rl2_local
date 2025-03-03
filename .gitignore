@@ -1,5 +1,6 @@
 
 *.xtf
+AirflowDocker/dags/__pycache__/*
 AirflowDocker/etl/temp/*
 AirflowDocker/etl/xtf/*
 AirflowDocker/logs/*

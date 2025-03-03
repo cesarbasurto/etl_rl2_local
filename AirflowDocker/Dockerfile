@@ -3,10 +3,7 @@ FROM apache/airflow:2.10.4
 
 # usuario 'airflow'
 USER airflow
-RUN pip install --upgrade pip
-RUN pip install great-expectations==0.18.22
-RUN pip install psycopg2-binary
-RUN pip install pyyaml
+RUN pip install --upgrade pip great-expectations==0.18.22 psycopg2-binary pyyaml
 
 # Cambiamos a root temporalmente para instalar paquetes
 USER root

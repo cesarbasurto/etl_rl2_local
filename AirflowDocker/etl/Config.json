@@ -6,8 +6,8 @@
 		"db_name":"arfw_etl_rl2"
 	},
 	"insumos_web":{
-		"area_reserva_ley2":"https://www.arcgis.com/sharing/rest/content/items/988bc78e62c64KKKKKf8c8b0b85fbac83c478/data",
-		"compensacion_ley2":"https://www.arcgis.com/sharing/rest/content/items/75hyua38dc85b664c3ead307b65b21e8900/data",
+		"area_reserva_ley2":"https://www.arcgis.com/sharing/rest/content/items/988bc78e62c64f8c8b0b85fbac83c478/data",
+		"compensacion_ley2":"https://www.arcgis.com/sharing/rest/content/items/75a38dc85b664c3ead307b65b21e8900/data",
 		"sustracciones_temporales_ley2":"https://www.arcgis.com/sharing/rest/content/items/2216e81419ab4cc3a1f41ca7950de09a/data",
 		"sustracciones_definitivas_ley2":"https://www.arcgis.com/sharing/rest/content/items/25749923a366465cbf829269a93472ad/data",
 		"zonificacion_ley2":"https://www.arcgis.com/sharing/rest/content/items/3d2b7c951c494feab3549410f592512b/data"
