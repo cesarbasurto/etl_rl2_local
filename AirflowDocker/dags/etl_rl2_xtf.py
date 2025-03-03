@@ -414,14 +414,51 @@ def report_schema_expectations(yaml_filename, schema):
     con las encontradas en el esquema indicado.
     """
     logging.info(f"Generando reporte de estructura para {yaml_filename} en el esquema '{schema}'...")
+
+    # 1. Cargar la configuración y las expectativas desde YAML
+    data = _cargar_expectativas_desde_yaml(yaml_filename)
+    expected_tables = _obtener_tablas_esperadas(data)
+
+    # 2. Crear el engine de SQLAlchemy y obtener la lista de tablas en el esquema
+    engine = _obtener_engine_sqlalchemy()
+    actual_tables = _obtener_tablas_esquema(engine, schema)
+
+    # 3. Comparar tablas y generar reporte base
+    report_lines = _revisar_tablas_encontradas(schema, expected_tables, actual_tables)
+
+    # 4. Para cada tabla esperada, revisar columnas
+    report_lines += _revisar_columnas_tabla(engine, schema, expected_tables, actual_tables)
+
+    # 5. Consolidar reporte y loguear
+    final_report = "\n".join(report_lines)
+    logging.info("Reporte de validación de estructura:\n" + final_report)
+    return final_report
+
+
+def _cargar_expectativas_desde_yaml(yaml_filename):
+    """
+    Lee el archivo YAML y devuelve los datos cargados.
+    Lanza excepción si el archivo no existe o no tiene el formato esperado.
+    """
     yaml_path = os.path.join(GX_DIR, yaml_filename)
     if not os.path.exists(yaml_path):
         raise Exception(f"Archivo de expectativas {yaml_path} no existe.")
+
     with open(yaml_path, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
+
     if "expectations" not in data:
         raise Exception("El archivo de expectativas no contiene 'expectations'.")
-    
+
+    return data
+
+
+def _obtener_tablas_esperadas(data):
+    """
+    Procesa el contenido del YAML y devuelve un diccionario con:
+      - clave: nombre de tabla
+      - valor: { 'expected_columns': set(...), 'exact_match': bool }
+    """
     expected_tables = {}
     for exp in data["expectations"]:
         if exp.get("expectation_type") == "expect_table_columns_to_match_set":
@@ -431,58 +468,114 @@ def report_schema_expectations(yaml_filename, schema):
                     "expected_columns": set(exp.get("kwargs", {}).get("column_set", [])),
                     "exact_match": exp.get("kwargs", {}).get("exact_match", False)
                 }
+    return expected_tables
+
+
+def _obtener_engine_sqlalchemy():
+    """
+    Construye y devuelve un engine de SQLAlchemy para conectarse a la base de datos.
+    """
     config = leer_configuracion()
     db_config = config["db"]
     db_user = db_config["user"]
     db_password = db_config["password"]
     db_host = db_config["host"]
     db_port = db_config["port"]
-    db_name="arfw_etl_rl2"
+    db_name = "arfw_etl_rl2"  # Nombre fijo según lógica previa
 
-    DB_CONNECTION_STRING_GE = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+    connection_string = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+    return sqlalchemy.create_engine(connection_string)
 
-    engine = sqlalchemy.create_engine(DB_CONNECTION_STRING_GE)
-    query_tables = f"SELECT table_name FROM information_schema.tables WHERE table_schema = '{schema}';"
-    df_tables = pd.read_sql(query_tables, engine)
-    actual_tables = set(df_tables["table_name"].tolist())
-    
-    report_lines = []
-    report_lines.append(f"REPORTE DE ESTRUCTURA PARA EL ESQUEMA '{schema}':\n")
+
+def _obtener_tablas_esquema(engine, schema):
+    """
+    Devuelve un conjunto con los nombres de las tablas encontradas en el esquema indicado.
+    """
+    query = f"""
+        SELECT table_name 
+        FROM information_schema.tables 
+        WHERE table_schema = '{schema}';
+    """
+    df_tables = pd.read_sql(query, engine)
+    return set(df_tables["table_name"].tolist())
+
+
+def _revisar_tablas_encontradas(schema, expected_tables, actual_tables):
+    """
+    Genera la parte del reporte en la que se informa qué tablas 
+    esperadas se encuentran o faltan en el esquema.
+    """
+    report_lines = [f"REPORTE DE ESTRUCTURA PARA EL ESQUEMA '{schema}':\n"]
     report_lines.append("Tablas esperadas vs. encontradas:")
+
     for table in expected_tables.keys():
         if table in actual_tables:
             report_lines.append(f"  {table}: ✔️")
         else:
             report_lines.append(f"  {table}: ❌ (Falta)")
+
     report_lines.append("\nDetalle de columnas para cada tabla:")
+    return report_lines
+
+
+def _revisar_columnas_tabla(engine, schema, expected_tables, actual_tables):
+    """
+    Para cada tabla, compara las columnas esperadas vs. las encontradas.
+    Retorna la sección de reporte correspondiente.
+    """
+    report = []
     for table, exp_details in expected_tables.items():
         if table not in actual_tables:
             continue
+
         expected_cols = exp_details["expected_columns"]
         exact = exp_details["exact_match"]
-        query_cols = f"SELECT column_name FROM information_schema.columns WHERE table_schema = '{schema}' AND table_name = '{table}';"
+
+        query_cols = f"""
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_schema = '{schema}' 
+              AND table_name = '{table}';
+        """
         df_cols = pd.read_sql(query_cols, engine)
         actual_cols = set(df_cols["column_name"].tolist())
+
         if exact:
-            if actual_cols == expected_cols:
-                report_lines.append(f"  {table}: Se esperaban {sorted(expected_cols)} y se encontraron exactamente. ✔️")
-            else:
-                missing = expected_cols - actual_cols
-                extra = actual_cols - expected_cols
-                report_lines.append(f"  {table}: ❌ Diferencias en columnas:")
-                if missing:
-                    report_lines.append(f"    Faltantes: {sorted(missing)}")
-                if extra:
-                    report_lines.append(f"    Extras: {sorted(extra)}")
+            report.append(_comparar_columnas_exactas(table, expected_cols, actual_cols))
         else:
-            if expected_cols.issubset(actual_cols):
-                report_lines.append(f"  {table}: Se esperaba (subconjunto) {sorted(expected_cols)} y se encontraron. ✔️")
-            else:
-                missing = expected_cols - actual_cols
-                report_lines.append(f"  {table}: ❌ Faltan columnas: {sorted(missing)}")
-    final_report = "\n".join(report_lines)
-    logging.info("Reporte de validación de estructura:\n" + final_report)
-    return final_report
+            report.append(_comparar_columnas_subconjunto(table, expected_cols, actual_cols))
+
+    return report
+
+
+def _comparar_columnas_exactas(table, expected_cols, actual_cols):
+    """
+    Si exact_match es True, se espera que las columnas coincidan exactamente.
+    Retorna el texto del reporte para esa tabla.
+    """
+    if actual_cols == expected_cols:
+        return f"  {table}: Se esperaban {sorted(expected_cols)} y se encontraron exactamente. ✔️"
+    missing = expected_cols - actual_cols
+    extra = actual_cols - expected_cols
+    resultado = [f"  {table}: ❌ Diferencias en columnas:"]
+    if missing:
+        resultado.append(f"    Faltantes: {sorted(missing)}")
+    if extra:
+        resultado.append(f"    Extras: {sorted(extra)}")
+    return "\n".join(resultado)
+
+
+def _comparar_columnas_subconjunto(table, expected_cols, actual_cols):
+    """
+    Si exact_match es False, se espera que las columnas esperadas sean 
+    un subconjunto de las columnas reales.
+    Retorna el texto del reporte para esa tabla.
+    """
+    if expected_cols.issubset(actual_cols):
+        return f"  {table}: Se esperaba (subconjunto) {sorted(expected_cols)} y se encontraron. ✔️"
+    missing = expected_cols - actual_cols
+    return f"  {table}: ❌ Faltan columnas: {sorted(missing)}"
+
 
 # ------------------------- DEFINICIÓN DEL DAG -------------------------
 default_args = {
