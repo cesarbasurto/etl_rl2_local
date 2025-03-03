@@ -9,7 +9,12 @@ RUN pip install --upgrade great-expectations==0.18.22 pip psycopg2-binary pyyaml
 USER root
 
 # Instalamos Java (OpenJDK) en el contenedor
-RUN apt-get update && apt-get install -y   gdal-bin  libgdal-dev   openjdk-17-jre  python3-gdal &&  apt-get clean apt-get clean
-
+RUN apt-get update && \
+    apt-get install -y \
+        gdal-bin \
+        libgdal-dev \
+        openjdk-17-jre \
+        python3-gdal && \
+    apt-get clean
 # volvemos al usuario 'airflow'
 USER airflow
