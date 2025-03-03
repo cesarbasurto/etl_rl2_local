@@ -1,6 +1,8 @@
 import os
 import yaml
+import json
 import sqlalchemy
+import logging
 import pandas as pd
 from datetime import datetime
 
@@ -9,7 +11,7 @@ from airflow.operators.python import PythonOperator
 
 # ------------------- CONFIGURACIÓN -------------------
 
-DB_CONNECTION_STRING_GE = "postgresql://ladm:123456@3.133.21.126:5432/arfw_etl_rl2"
+CONFIG_PATH = "/opt/airflow/etl/Config.json"
 OUTPUT_YML_FOLDER = "/opt/airflow/dags/gx/"
 SCHEMAS = ["insumos", "estructura_intermedia", "ladm"]
 
@@ -34,6 +36,19 @@ def map_postgres_type_to_ge(data_type: str) -> str:
     """Traduce data_type de Postgres a un tipo que Great Expectations reconozca."""
     return POSTGRES_TO_GE_TYPE.get(data_type.lower(), "str")
 
+# ------------------------- FUNCIONES UTILITARIAS -------------------------
+
+def leer_configuracion():
+    """Lee la configuración desde Config.json."""
+    try:
+        with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+            config = json.load(f)
+        logging.info("Configuración cargada correctamente.")
+        return config
+    except Exception as e:
+        logging.error(f"Error leyendo la configuración: {e}")
+        raise
+
 # ------------------- FUNCIONES -------------------
 
 def generar_suite_ge_por_esquema(schema):
@@ -43,6 +58,16 @@ def generar_suite_ge_por_esquema(schema):
        para cada columna.
     3) Exporta la suite a un archivo YAML: gx_{schema}.yml
     """
+    config = leer_configuracion()
+    db_config = config["db"]
+    db_user = db_config["user"]
+    db_password = db_config["password"]
+    db_host = db_config["host"]
+    db_port = db_config["port"]
+    db_name="arfw_etl_rl2"
+
+    DB_CONNECTION_STRING_GE = f"postgresql://{db_user}:{db_password}@{db_host}:{db_port}/{db_name}"
+
     engine = sqlalchemy.create_engine(DB_CONNECTION_STRING_GE)
 
     # 1. Listar tablas del esquema
