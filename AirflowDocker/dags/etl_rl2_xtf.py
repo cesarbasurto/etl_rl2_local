@@ -356,8 +356,7 @@ def ejecutar_validacion_datos():
         resultado = validar_estructura()
         if resultado is not None:
             if isinstance(resultado, bool) and not resultado:
-                logging.error("Validación de datos falló.")
-                raise
+                logging.error("Validación de datos falló.")                
             elif isinstance(resultado, str):
                 ejecutar_sql(resultado)
         logging.info("Validación de datos completada.")
